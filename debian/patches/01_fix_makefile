@@ -1,0 +1,21 @@
+--- a/Makefile
++++ b/Makefile
+@@ -4,15 +4,15 @@
+ BUILD = $(shell date +%Y%m%d%H)
+ #DEBUG = -g -D_DEBUG
+ OPTS = -DMAJORVERSION=0 -DMINORVERSION=1 -DSUBMINORVERSION=0 -DBUILD=$(BUILD) -DCODENAME=\"25c3\"
+-CFLAGS = -Wall
++CFLAGS += -Wall
+ SDIR = src/
+ ODIR = obj/
+-INSTBINDIR = /usr/local/bin
++INSTBINDIR = $(DESTDIR)/usr/bin
+ SRCS = $(SDIR)fspy.c $(SDIR)enumdirs.c $(SDIR)fsevents.c $(SDIR)isnumber.c $(SDIR)stating.c $(SDIR)output.c $(SDIR)regmatch.c $(SDIR)numlen.c $(SDIR)adaptive.c $(SDIR)diff.c
+ OBJS = $(ODIR)fspy.o $(ODIR)enumdirs.o $(ODIR)fsevents.o $(ODIR)isnumber.o $(ODIR)stating.o $(ODIR)output.o $(ODIR)regmatch.o $(ODIR)numlen.o $(ODIR)adaptive.o $(ODIR)diff.o
+ CC = gcc
+ LD = gcc
+-LDFLAGS =
++LDFLAGS +=
+ DFLAGS = 
+ RM = /bin/rm
+ PROG = fspy
