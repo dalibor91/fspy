@@ -1,6 +1,7 @@
+Some trivial fixes in Makefile
 --- a/Makefile
 +++ b/Makefile
-@@ -4,15 +4,15 @@
+@@ -4,17 +4,17 @@
  BUILD = $(shell date +%Y%m%d%H)
  #DEBUG = -g -D_DEBUG
  OPTS = -DMAJORVERSION=0 -DMINORVERSION=1 -DSUBMINORVERSION=0 -DBUILD=$(BUILD) -DCODENAME=\"25c3\"
@@ -17,5 +18,17 @@
 -LDFLAGS =
 +LDFLAGS +=
  DFLAGS = 
- RM = /bin/rm
+-RM = /bin/rm
++RM = rm
  PROG = fspy
+ 
+ all: $(PROG)
+@@ -29,7 +29,7 @@ install:
+ 	cp $(PROG) $(INSTBINDIR)/$(PROG)
+ 
+ clean:
+-	$(RM) $(PROG) $(ODIR)*.o
++	$(RM) -f $(PROG) $(ODIR)*.o
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
+ 
