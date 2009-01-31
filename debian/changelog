@@ -1,3 +1,11 @@
+fspy (0.1.1-1) unstable; urgency=low
+
+  * New Upstream Version
+    + Upstream added the relevant LICENSE file and a copy of the GPL v2 and 3
+      to the package, thanks!
+
+ -- Giuseppe Iuculano <giuseppe@iuculano.it>  Sat, 31 Jan 2009 18:31:13 +0100
+
 fspy (0.1.0-1) unstable; urgency=low
 
   * Initial release (Closes: #513577) (LP: #323054)
