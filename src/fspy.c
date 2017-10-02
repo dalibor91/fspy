@@ -470,7 +470,9 @@ int main(int argc, char **argv) {
           if(adaptive == TRUE)
             adaptive_check(event->mask, fpath, lsptr, statdat, event->wd);
           if(diffstring != NULL) {
-            dprint.s = dprint.A = dprint.M = dprint.S = dprint.O = dprint.U = dprint.G = dprint.G = dprint.I = dprint.D = 0;
+            dprint.s = dprint.A = dprint.M = 0;
+	    dprint.S = dprint.O = dprint.U = 0;
+	    dprint.G = dprint.I = dprint.D = 0;
             diffing(fpath, statdat, &dprint, diffstring);
           }
           /* TODO: change print_data to use fpath instead of lpath and assembling the fqp on its own */
